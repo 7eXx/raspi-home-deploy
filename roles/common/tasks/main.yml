@@ -1,0 +1,10 @@
+- name: Update apt cache
+  apt: update_cache=yes
+
+- name: Install Docker.io and Docker Compose
+  apt:
+    state: present
+    pkg:
+      - docker.io
+      - docker-compose
+  
