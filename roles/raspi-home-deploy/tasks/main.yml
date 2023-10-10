@@ -1,0 +1,38 @@
+- name: folder structure for mosquitto
+  file:
+    path: "{{ item }}"
+    state: directory
+    mode: 0755
+  loop:
+    - /opt/raspi-home/mosquitto/config
+    - /opt/raspi-home/mosquitto/log
+    - /opt/raspi-home/mosquitto/data
+
+- name: copy configuration for mosquitto
+  copy:
+    src: opt_raspi_home_mosquitto_config_mosquitto.conf
+    dest: /opt/raspi-home/mosquitto/config/mosquitto.conf
+    mode: 0755
+
+- name: folder structure for backend
+  file:
+    path: "/opt/raspi-home/backend/"
+    state: directory
+    mode: 0755
+
+- name: copy environment file for backend
+  copy:
+    src: opt_raspi_home_backend_env_local
+    dest: /opt/raspi-home/backend/.env.local
+    mode: 0755
+
+- name: copy docker compose file
+  template:
+    src: opt_raspi_home_docker_compose.yaml.j2
+    dest: /opt/raspi-home/docker-compose.yaml
+    mode: 0755
+
+- name: deploy docker compose file
+  docker_compose:
+    project_src: /opt/raspi-home
+    state: present

@@ -1,0 +1,29 @@
+version: "3.8"
+
+services:
+  mosquitto:
+    image: eclipse-mosquitto
+    volumes:
+      - /opt/raspi-home/mosquitto/config:/mosquitto/config
+      - /opt/raspi-home/mosquitto/log:/mosquitto/log
+      - /opt/raspi-home/mosquitto/data:/mosquitto/data
+    ports:
+      - 1883:1883
+      - 9001:9001
+
+  backend:
+    image: "{{ private_docker_registry }}/{{ raspi_home_backend_image }}:{{ raspi_home_backend_image_tag }}"
+    environment:
+      - GPIOZERO_PIN_FACTORY=mock
+    volumes:
+      - /opt/raspi-home/backend/.env.local:/opt/raspi-home/.env.local
+    ports:
+      - 5000:5000
+
+  webapp:
+    image: "{{ private_docker_registry }}/{{ raspi_home_webapp_image }}:{{ raspi_home_webapp_image_tag }}"
+    ports:
+      - 18080:80 
+
+
+

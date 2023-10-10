@@ -1,3 +1,6 @@
+[vm]
+raspi_vm            ansible_host=192.168.178.168    ansible_connection=ssh      ansible_user=dietpi
+
 [test]
 raspi_test          ansible_host=192.168.0.200      ansible_connection=ssh       ansible_user=dietpi
 

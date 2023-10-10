@@ -1,0 +1,7 @@
+- name: Installing all commons
+  hosts:
+    - vm
+  become: true
+  roles:
+    - common
+    - raspi-home-deploy

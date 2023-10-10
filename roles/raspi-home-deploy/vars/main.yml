@@ -1,0 +1,7 @@
+private_docker_registry: synology-nas:5555
+
+raspi_home_backend_image: raspi-home-backend
+raspi_home_backend_image_tag: flask-cors
+
+raspi_home_webapp_image: raspi-home-ionic
+raspi_home_webapp_image_tag: cicd-docker-image
