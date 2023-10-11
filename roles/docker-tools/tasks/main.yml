@@ -37,3 +37,14 @@
   loop:
     - docker
     - docker-compose
+
+- name: Copy custom daemon config for docker
+  template:
+    src: etc_docker_daemon.json.j2
+    dest: /etc/docker/daemon.json
+    mode: 0755
+
+- name: Restart docker service
+  service:
+    name: docker
+    state: restarted

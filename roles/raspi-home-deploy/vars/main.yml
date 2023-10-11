@@ -1,6 +1,6 @@
 dietpi_release: bullseye
 
-private_docker_registry: synology-nas:5555
+private_docker_registry: registry.texhome.lan
 
 raspi_home_backend_image: raspi-home-backend
 raspi_home_backend_image_tag: flask-cors
