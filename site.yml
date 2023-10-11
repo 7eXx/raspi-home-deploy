@@ -1,7 +1,8 @@
 - name: Installing all commons
+  gather_facts: false
   hosts:
     - vm
   become: true
   roles:
-    - common
+    - docker-tools
     - raspi-home-deploy
