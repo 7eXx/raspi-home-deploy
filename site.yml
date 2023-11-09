@@ -4,5 +4,7 @@
     - vm
   become: true
   roles:
-    - docker-tools
-    - raspi-home-deploy
+    - role: docker-tools
+      tags: tools
+    - role: raspi-home-deploy
+      tags: deploy
