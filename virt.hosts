@@ -1,0 +1,2 @@
+[all]
+raspi_vm            ansible_host=192.168.178.168    ansible_connection=ssh      ansible_user=dietpi

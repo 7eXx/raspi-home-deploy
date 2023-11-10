@@ -1,7 +1,7 @@
 - name: Installing all commons
   gather_facts: false
   hosts:
-    - vm
+    - all
   become: true
   roles:
     - role: docker-tools
