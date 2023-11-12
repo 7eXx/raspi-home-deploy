@@ -6,5 +6,7 @@
   roles:
     - role: docker-tools
       tags: tools
+    - role: portainer-agent
+      tags: portainer-agent
     - role: raspi-home-deploy
       tags: deploy

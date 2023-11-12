@@ -1,0 +1,12 @@
+
+- name: Create portainer agent
+  docker_container:
+    name: portainer_agent
+    image: "portainer/agent:{{ portainer_agent_version }}"
+    state: present
+    restart_policy: "always"
+    exposed_ports:
+      - "{{ portainer_agent_port }}:9001"
+    volumes_from:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "/var/lib/docker/volumes:/var/lib/docker/volumes"
