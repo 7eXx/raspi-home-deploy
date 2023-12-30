@@ -15,8 +15,7 @@ services:
   backend:
     image: "{{ private_docker_registry }}/{{ raspi_home_backend_image }}:{{ raspi_home_backend_image_tag }}"
     restart: unless-stopped
-    environment:
-      - GPIOZERO_PIN_FACTORY=mock
+    privileged: true
     volumes:
       - /opt/raspi-home/backend/.env.local:/opt/raspi-home/.env.local
     ports:
