@@ -1,0 +1,10 @@
+
+- name: Update docker image
+  debug:
+    msg:
+    - "Update docker image: {{ docker_image }}"
+
+- name: Pull docker image
+  docker_image:
+    name: "{{ docker_image }}"
+    source: pull
