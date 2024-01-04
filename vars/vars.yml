@@ -1,5 +1,8 @@
 dietpi_release: bullseye
 
+portainer_agent_version: 2.19.1
+portainer_agent_port: 9091
+
 private_docker_registry: registry.texhome.lan
 
 raspi_home_backend_image: raspi-home-backend
