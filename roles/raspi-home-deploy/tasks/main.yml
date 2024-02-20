@@ -21,8 +21,8 @@
     mode: 0755
 
 - name: copy environment file for backend
-  copy:
-    src: opt_raspi_home_backend_env_local
+  template:
+    src: opt_raspi_home_backend_env_local.j2
     dest: /opt/raspi-home/backend/.env.local
     mode: 0755
 

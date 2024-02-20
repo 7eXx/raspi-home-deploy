@@ -1,0 +1,3 @@
+bot_token: "{{ vault_bot_token }}"
+bot_name: "{{ vault_bot_name }}"
+chat_ids: "{{ vault_chat_ids }}"
