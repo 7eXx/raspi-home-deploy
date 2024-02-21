@@ -5,6 +5,7 @@
   become: true
   vars_files:
     - vars/vars.yml
+    - vars/vault_vars.yml
   roles:
     - role: docker-tools
       tags: tools
