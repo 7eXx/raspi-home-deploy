@@ -19,13 +19,13 @@ services:
     volumes:
       - /opt/raspi-home/backend/.env.local:/opt/raspi-home/.env.local
     ports:
-      - "{{ flask_backend_port }}":5000
+      - {{ flask_backend_port }}:5000
 
   webapp:
     image: "{{ private_docker_registry }}/{{ raspi_home_webapp_image }}:{{ raspi_home_webapp_image_tag }}"
     restart: unless-stopped
     ports:
-      - "{{ webapp_http_port }}":80 
+      - {{ webapp_http_port }}:80 
 
 
 
