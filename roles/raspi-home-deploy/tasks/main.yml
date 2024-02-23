@@ -26,6 +26,12 @@
     dest: /opt/raspi-home/backend/.env.local
     mode: 0755
 
+- name: create log file
+  file:
+    path: /opt/raspi-home/{{ log_file }}
+    state: touch
+    mode: 0755
+
 - name: copy docker compose file
   template:
     src: opt_raspi_home_docker_compose.yaml.j2

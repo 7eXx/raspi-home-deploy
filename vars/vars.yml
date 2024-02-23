@@ -11,5 +11,7 @@ raspi_home_backend_image_tag: latest
 raspi_home_webapp_image: raspi-home-ionic
 raspi_home_webapp_image_tag: latest
 
+log_file: raspi_home.log
+
 flask_backend_port: 5000
 webapp_http_port: 18080

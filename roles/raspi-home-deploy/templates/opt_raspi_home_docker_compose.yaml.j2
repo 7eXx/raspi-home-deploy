@@ -18,6 +18,7 @@ services:
     privileged: true
     volumes:
       - /opt/raspi-home/backend/.env.local:/opt/raspi-home/.env.local
+      - /opt/raspi-home/{{ log_file }}:/opt/raspi-home/{{ log_file }}
     ports:
       - {{ flask_backend_port }}:5000
 
