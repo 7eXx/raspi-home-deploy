@@ -1,3 +1,5 @@
 bot_token: "{{ vault_bot_token }}"
 bot_name: "{{ vault_bot_name }}"
 chat_ids: "{{ vault_chat_ids }}"
+
+ryzen_mac_addr: "04:D9:F5:21:8E:57"
