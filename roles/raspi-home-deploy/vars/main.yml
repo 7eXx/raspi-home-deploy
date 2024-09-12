@@ -2,4 +2,11 @@ bot_token: "{{ vault_bot_token }}"
 bot_name: "{{ vault_bot_name }}"
 chat_ids: "{{ vault_chat_ids }}"
 
+jenkins_user: "{{ vault_jenkins_user }}"
+jenkins_pass: "{{ vault_jenkins_pass }}"
+
+wake_lan_job_url: "jenkins.texhome.lan/job/Wake%20on%20Lan/buildWithParameters"
+wake_lan_token: "{{ vault_wake_lan_token }}"
+
 ryzen_mac_addr: "04:D9:F5:21:8E:57"
+luigi_lenovo_mac_addr: "4C:CC:6A:A3:4C:8E"
