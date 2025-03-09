@@ -24,6 +24,14 @@ services:
     ports:
       - {{ flask_backend_port }}:5000
 
+  alexa:
+    image: "{{ private_docker_registry }}/{{ raspi_home_alexa_image }}:{{ raspi_home_alexa_image_tag }}"
+    image: registry.texhome.lan/raspi-home-alexa:main
+    volumes:
+      - /opt/raspi-home/backend/.env.local:/opt/raspi-alexa/.env.local
+    ports:
+      - {{ alexa_http_port }}:3000
+
   webapp:
     image: "{{ private_docker_registry }}/{{ raspi_home_webapp_image }}:{{ raspi_home_webapp_image_tag }}"
     restart: unless-stopped
