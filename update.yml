@@ -11,6 +11,10 @@
       vars:
         docker_image: "{{ private_docker_registry }}/{{ raspi_home_backend_image }}:{{ raspi_home_backend_image_tag }}"
     - role: update-docker-image
+      tags: alexa
+      vars:
+        docker_image: "{{ private_docker_registry }}/{{ raspi_home_alexa_image }}:{{ raspi_home_alexa_image_tag }}"
+    - role: update-docker-image
       tags: webapp
       vars:
         docker_image: "{{ private_docker_registry }}/{{ raspi_home_webapp_image }}:{{ raspi_home_webapp_image_tag }}"
