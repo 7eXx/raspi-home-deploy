@@ -26,7 +26,7 @@ services:
 
   alexa:
     image: "{{ private_docker_registry }}/{{ raspi_home_alexa_image }}:{{ raspi_home_alexa_image_tag }}"
-    image: registry.texhome.lan/raspi-home-alexa:main
+    restart: unless-stopped
     volumes:
       - /opt/raspi-home/backend/.env.local:/opt/raspi-alexa/.env.local
     ports:
