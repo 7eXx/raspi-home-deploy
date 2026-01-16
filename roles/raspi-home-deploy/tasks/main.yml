@@ -39,6 +39,6 @@
     mode: 0755
 
 - name: deploy docker compose file
-  docker_compose:
+  community.docker.docker_compose_v2:
     project_src: /opt/raspi-home
     state: present
