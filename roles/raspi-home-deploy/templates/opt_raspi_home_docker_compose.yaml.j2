@@ -28,7 +28,7 @@ services:
     image: "{{ private_docker_registry }}/{{ raspi_home_alexa_image }}:{{ raspi_home_alexa_image_tag }}"
     restart: unless-stopped
     volumes:
-      - /opt/raspi-home/backend/.env.local:/opt/raspi-alexa/.env.local
+      - /opt/raspi-home/alexa/.env.local:/opt/raspi-alexa/.env.local
     ports:
       - {{ alexa_http_port }}:3000
 
